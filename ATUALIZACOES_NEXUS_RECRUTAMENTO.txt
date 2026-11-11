@@ -1,0 +1,17 @@
+NEXUS — Atualização do recrutamento e remoção do Gamer Center
+
+- Removido o módulo do Gamer Center, seus registros de inicialização, tratamento de mensagens, botões e entrada no /paineldono.
+- Removidas as dependências do Gamer Center no sistema de backup/restauração e a documentação de configuração da IA ligada a esse módulo.
+- Adicionada migração segura: se o banco ainda contiver tabelas central_gamer_*, o bot cria uma cópia integral do SQLite em data/backups antes de remover somente essas tabelas antigas.
+- O formulário original de candidatura mantém nome/nick, UID do Free Fire e WhatsApp; a pergunta de disponibilidade foi removida dele.
+- A segunda etapa contém idade, função, tempo de jogo e disponibilidade. As respostas ficam temporárias durante a análise e só são incorporadas ao cadastro definitivo quando o candidato é aprovado; respostas temporárias são descartadas na reprovação.
+- Os controles administrativos ficam em um painel separado no canal administrativo existente. O canal privado do candidato não recebe os botões de ADM.
+- Incluídos envio do segundo formulário e envio de ID/senha da sala Free Fire (sem campo de ID de equipe).
+- /lista_candidatos mantém pesquisa, listagem e paginação; exibe a segunda etapa apenas para aprovados e oferece cópia individual dos dados.
+- /paineldono recebe somente um novo botão de recrutamento, que abre o painel secundário de personalização de mensagens, rótulos dos formulários, opções de função e liberação/bloqueio das candidaturas.
+- queue_manager.py, views.py, database.py, config.py, xtreino.py, guild_war.py, pix.py e missions.py permaneceram sem alterações.
+
+Verificações realizadas:
+- Compilação sintática dos módulos Python modificados.
+- Suíte existente: 9 testes aprovados, 1 ignorado e 4 subtestes aprovados.
+- Não foi possível executar teste de integração real no Discord nesta execução; não há token/servidor de teste conectado.

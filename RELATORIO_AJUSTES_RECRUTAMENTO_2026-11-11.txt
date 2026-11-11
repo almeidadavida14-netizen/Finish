@@ -1,0 +1,23 @@
+NEXUS - RELATORIO DE AJUSTES DE RECRUTAMENTO
+Data: 11/11/2026
+
+AJUSTES NESTA VERSAO
+- Painel Staff publicado diretamente no canal privado de teste do candidato.
+- Removida a criação/uso de thread privada para o Painel Staff.
+- Painel Staff voltou a usar sete botões individuais, sem menu suspenso.
+- Ações protegidas por validação de ADM/equipe autorizada em cada interação.
+- Respostas administrativas e modais de credenciais continuam sendo enviados de forma efêmera/privada ao ADM.
+- Aprovação e reprovação informam e agendam exclusão do canal de teste após 30 segundos.
+- Mensagem de candidatura no canal administrativo continua sendo removida imediatamente após aceite bem-sucedido; a recusa mantém o comportamento já existente.
+- A coluna antiga staff_thread_id é mantida por compatibilidade com bancos existentes, mas não é mais usada para criar tópicos ou threads.
+- O painel de filas não foi alterado nesta etapa.
+
+VALIDACOES EXECUTADAS
+- Sintaxe/AST de recruitment.py: OK.
+- Compilação de recruitment.py: OK.
+- Testes automatizados disponíveis: 5 passaram.
+- Teste de missions não executado porque discord.py não está instalado no ambiente (dependência ausente).
+- Não foi possível validar interações reais no Discord sem executar o bot conectado ao servidor.
+
+OBSERVACAO
+O painel fica visível no canal de teste, conforme solicitado. Os botões verificam a autorização do usuário antes de executar cada ação. Mensagens e formulários de resposta administrativa usam respostas efêmeras quando suportado pela interação.

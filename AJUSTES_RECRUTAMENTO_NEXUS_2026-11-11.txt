@@ -1,0 +1,18 @@
+AJUSTES DO RECRUTAMENTO NEXUS — 11/11/2026
+
+- Painel Staff refeito como um único menu suspenso com sete ações.
+- Painel administrativo colocado em thread privada vinculada ao canal do candidato; o candidato não é convidado para essa thread.
+- A equipe autorizada recebe acesso ao canal principal e à thread privada, conforme permissões e cache de membros do servidor.
+- Adicionada a coluna staff_thread_id por migração segura para evitar criar threads/painéis duplicados.
+- Na inicialização, o bot tenta migrar candidatos ativos para o painel privado e remove mensagens antigas do painel administrativo no canal de entrada.
+- A mensagem original da candidatura continua sendo apagada imediatamente após aceite ou recusa.
+- O canal de teste continua sendo excluído 40 segundos após aprovação/reprovação, como já estava configurado.
+- Segunda etapa usa somente as funções Rush, Curandeiro, Full gás e Suporte; a função é escolhida no menu antes de abrir o formulário.
+- Busca de candidatos ampliada para UID Free Fire, WhatsApp, nick do cadastro, ID Discord e nomes/nicks Discord disponíveis no cache do servidor.
+- Remoção permite qualquer status, mostra os dados para confirmação e só remove após confirmação do ADM que iniciou a ação.
+- Mantidos o comando /lista_candidatos, /paineldono, dados existentes e o painel de filas.
+
+VALIDAÇÃO
+- Compilação Python: aprovada.
+- Testes automatizados disponíveis: 9 passaram; 1 foi ignorado; 4 subtestes passaram.
+- Não foi possível executar teste real no Discord nesta sessão: não há discord.py instalado nem token/servidor conectado no ambiente de validação. A criação de threads privadas, permissões e interações precisa ser confirmada no servidor após publicação.
